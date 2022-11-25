@@ -14,6 +14,7 @@ private:
 public:
     GameState start();
     GameState load();
+    GameState runGame();
 };
 
 #endif
