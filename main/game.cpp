@@ -2,7 +2,7 @@
 
 #include "../headers/game.hh"
 
-GameState Game::start()
+GameExitState Game::start()
 {
     //do stuff
 
@@ -10,7 +10,7 @@ GameState Game::start()
     return runGame();
 }
 
-GameState Game::load()
+GameExitState Game::load()
 {
     //do stuff
 

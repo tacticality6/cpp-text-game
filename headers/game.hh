@@ -12,9 +12,9 @@ class Game {
 private:
 
 public:
-    GameState start();
-    GameState load();
-    GameState runGame();
+    GameExitState start();
+    GameExitState load();
+    GameExitState runGame();
 };
 
 #endif

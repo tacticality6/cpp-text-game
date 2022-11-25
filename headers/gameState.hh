@@ -3,14 +3,12 @@
 #ifndef GAMESTATE_HH
 #define GAMESTATE_HH
 
-enum GameState
+enum GameExitState
 {
     gameExitSuccess,
     gameExitFailure,
-    unexpectedError,
-    defaultState,
 };
 
-std::string stateText(GameState state);
+std::string stateText(GameExitState state);
 
 #endif

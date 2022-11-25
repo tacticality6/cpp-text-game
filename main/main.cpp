@@ -10,7 +10,8 @@
 int main() 
 {
     //variable definitions
-
+    Room testRoom {"TestRoom", "a test room, for testing"};
+    Item testItem {"TestItem", "a test Item", 0b00000000};
 
 
     //Game state
@@ -20,7 +21,7 @@ int main()
 
     //begin
     Game game{};
-    GameState status {defaultState};
+    GameExitState status {gameExitFailure};
     try
     {
         if (load)
@@ -32,7 +33,7 @@ int main()
         }
     } catch (const std::exception& e)
     {
-        std::cerr << stateText(unexpectedError) << std::endl;
+        std::cerr << stateText(gameExitFailure) << std::endl;
         std::cerr << e.what() << std::endl;
 
         return 1;

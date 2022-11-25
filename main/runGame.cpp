@@ -2,11 +2,11 @@
 
 #include "../headers/game.hh"
 
-GameState Game::runGame()
+GameExitState Game::runGame()
 {
     //gaming time
     
-    
+
 
     //exit the game
     return gameExitSuccess;

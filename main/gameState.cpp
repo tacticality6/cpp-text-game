@@ -2,14 +2,12 @@
 
 #include "../headers/gameState.hh"
 
-std::string stateText(GameState state)
+std::string stateText(GameExitState state)
 {
     switch (state)
     {
         case gameExitSuccess: return "GameExitSuccess";
         case gameExitFailure: return "GameExitFailure";
-        case unexpectedError: return "UnexpectedError";
-        case defaultState:    
-        default:              return "DefaultStateError";
+        default:              return "UnexpectedError";
     }
 }
