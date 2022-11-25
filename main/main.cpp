@@ -2,6 +2,7 @@
 #include <exception>
 
 #include "../headers/entity.hh"
+#include "../headers/item.hh"
 #include "../headers/room.hh"
 #include "../headers/game.hh"
 #include "../headers/gameState.hh"
