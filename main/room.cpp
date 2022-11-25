@@ -51,7 +51,7 @@ void Room::moveEntity(Room& rm, const Entity& en)
     //add the entity to the new room
     rm.addEntity(en);
     //remove it from the current room
-    rm.removeEntity(en);
+    this->removeEntity(en);
 }
 
 //check if rooms are equivalent
