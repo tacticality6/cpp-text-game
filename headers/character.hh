@@ -19,6 +19,32 @@ private:
 
     virtual void die();
 
+protected:
+    Character()
+    : Entity()
+    {
+        baseStats = {10, 10, 10, 10, 10, 10, 10};
+        stats = baseStats;
+    }
+    Character(const std::string& name)
+    : Entity(name)
+    {
+        baseStats = {10, 10, 10, 10, 10, 10, 10};
+        stats = baseStats;
+    }
+    Character(const std::string& name, const std::string& description)
+    : Entity(name, description)
+    {
+        baseStats = {10, 10, 10, 10, 10, 10, 10};
+        stats = baseStats;
+    }
+    Character(const std::string& name, const std::string& description, const Stats& baseStats)
+    : Entity(name, description)
+    {
+        this->baseStats = baseStats;
+        stats = this->baseStats;
+    }
+
 public:
     //getters & setters
     const Stats&               getStats() const { return baseStats; }
