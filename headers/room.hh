@@ -35,6 +35,7 @@ public:
     Room(const std::string& name)
     {
         this->name = name;
+        this->description = "EMPTY DESCRIPTION";
     }
     Room(const std::string& name, const std::string& description)
     {
