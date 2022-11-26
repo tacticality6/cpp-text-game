@@ -17,7 +17,10 @@ private:
     std::vector<Item> inventory;
     std::vector<Action> actions;
 
-    virtual void die();
+    virtual void die()
+    {
+
+    }
 
 protected:
     Character()

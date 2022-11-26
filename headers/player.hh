@@ -1,4 +1,4 @@
-
+#include <iostream>
 
 #include "character.hh"
 #include "equipment.hh"
@@ -11,6 +11,10 @@ class Player : public Character
 private:
     std::vector<Equipment> equipment;
 
+    void die()
+    {
+        std::cerr << "Player has died";
+    }
 };
 
 #endif
