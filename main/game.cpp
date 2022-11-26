@@ -2,9 +2,12 @@
 
 #include "../headers/game.hh"
 
-GameExitState Game::start()
+GameExitState Game::start(std::vector<Room*> roomList, Player* player, Room* startingRoom)
 {
-    //do stuff
+    //set variables
+    this->roomList = roomList;
+    this->player = player;
+    this->currentRoom = startingRoom;
 
     //main game
     return runGame();

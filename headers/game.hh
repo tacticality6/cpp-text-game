@@ -11,7 +11,7 @@
 
 class Game {
 private:
-    std::vector<Room> roomList;
+    std::vector<Room*> roomList;
     Player* player;
     Room* currentRoom;
 public:
@@ -22,7 +22,7 @@ public:
     }
     
 
-    GameExitState start();
+    GameExitState start(std::vector<Room*> roomList, Player* player, Room* startingRoom);
     GameExitState load();
     GameExitState runGame();
 };

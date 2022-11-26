@@ -5,13 +5,26 @@
 #include "../headers/item.hh"
 #include "../headers/room.hh"
 #include "../headers/game.hh"
-#include "../headers/gameState.hh"
+#include "../headers/gameExitState.hh"
 
 int main() 
 {
     //variable definitions
-    Room testRoom {"TestRoom", "a test room, for testing"};
+    //items
     Item testItem {"TestItem", "a test Item", 0b00000000};
+    //commands
+    //...
+    //Rooms
+    Room testRoom {"TestRoom", "a test room, for testing"};
+
+    //Room list
+    std::vector<Room*> roomList{&testRoom};
+
+    //player definition
+    Player player;
+
+    //starting room
+    Room* startingRoom{&testRoom};
 
 
     //Game state
@@ -26,7 +39,7 @@ int main()
     {
         if (load)
         {
-            status = game.start();
+            status = game.start(roomList, &player, startingRoom);
         } else
         {
             status = game.load();
