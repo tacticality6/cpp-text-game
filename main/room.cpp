@@ -9,7 +9,7 @@
 #include "../headers/entity.hh"
 
 //check if entity is in the room
-bool Room::inRoom(const Entity& entity) const
+bool Room::inRoom(const Entity*& entity) const
 {
     for (int i{0}; i < contents.size(); i++) 
     {
@@ -23,9 +23,9 @@ bool Room::inRoom(const Entity& entity) const
 }
 
 //add an entity to the room
-void Room::addEntity(const Entity& en)
+void Room::addEntity(const Entity* &en)
 {
-    contents.push_back(en);
+    contents.push_back(const_cast<Entity*>(en));
 }
 
 //remove entities from the room
@@ -35,7 +35,7 @@ void Room::removeEntity(int i)
     contents.erase(contents.begin()+i);
 }
 //by value
-void Room::removeEntity(const Entity& entity)
+void Room::removeEntity(const Entity*& entity)
 {
     for (int i{0}; i < contents.size(); i++) 
     {
@@ -46,9 +46,10 @@ void Room::removeEntity(const Entity& entity)
 }
 
 //move an entity from 1 room to another
-void Room::moveEntity(Room& rm, const Entity& en)
+void Room::moveEntity(Room& rm, const Entity*& en)
 {
     //add the entity to the new room
+
     rm.addEntity(en);
     //remove it from the current room
     this->removeEntity(en);
