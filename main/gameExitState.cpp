@@ -1,6 +1,6 @@
 #include <string>
 
-#include "../headers/gameState.hh"
+#include "../headers/gameExitState.hh"
 
 std::string stateText(GameExitState state)
 {

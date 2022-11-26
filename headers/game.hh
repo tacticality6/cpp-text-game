@@ -3,7 +3,7 @@
 #include "entity.hh"
 
 #include "room.hh"
-#include "gameState.hh"
+#include "gameExitState.hh"
 #include "player.hh"
 
 #ifndef GAME_HH
