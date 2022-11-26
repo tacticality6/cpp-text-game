@@ -4,7 +4,6 @@
 #include "command.hh"
 #include "player.hh"
 #include "room.hh"
-#include "game.hh"
 
 #ifndef COMMANDHANDLER_HH
 #define COMMANDHANDLER_HH
@@ -12,14 +11,12 @@
 class CommandHandler
 {
 private:
-    Game* game;
     std::vector<Command> commandList;
 
 public:
     //constructors
-    CommandHandler(Game* game, std::vector<Command> commandList)
+    CommandHandler(std::vector<Command> commandList)
     {
-        this->game = game;
         this->commandList = commandList;
     }
 
