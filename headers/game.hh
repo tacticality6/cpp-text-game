@@ -4,14 +4,24 @@
 
 #include "room.hh"
 #include "gameState.hh"
+#include "player.hh"
 
 #ifndef GAME_HH
 #define GAME_HH
 
 class Game {
 private:
-
+    std::vector<Room> roomList;
+    Player* player;
+    Room* currentRoom;
 public:
+    Game()
+    {
+        player = nullptr;
+        currentRoom = nullptr;
+    }
+    
+
     GameExitState start();
     GameExitState load();
     GameExitState runGame();
